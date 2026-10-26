@@ -1,6 +1,10 @@
-# Firefox Toolkit
+# My Toolkit
 
 Plugin modular para Firefox que junta o antigo **reddit-plugin** e o **custom-firefox-sidebar** em uma única extensão. Cada funcionalidade é um módulo que pode ser ligado e desligado no popup ou na página de opções.
+
+## Versão e publicação
+
+Este plugin é a continuação do **Reddit Plugin** publicado no addons.mozilla.org (versão 1.1). Ele usa o mesmo ID (`reddit-plugin@example.com`) e começa na versão **1.2**, então deve ser enviado como nova versão daquele mesmo listing, e quem já tem o Reddit Plugin instalado recebe a atualização automaticamente.
 
 ## Módulos
 

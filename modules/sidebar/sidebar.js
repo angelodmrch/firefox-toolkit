@@ -15,7 +15,7 @@
     const config = await settings.get("sidebar");
     if (!config.enabled) {
       header.hidden = true;
-      message.textContent = "O módulo Sidebar está desativado nas opções do Firefox Toolkit.";
+      message.textContent = "O módulo Sidebar está desativado nas opções do My Toolkit.";
       setTitle();
       return;
     }
