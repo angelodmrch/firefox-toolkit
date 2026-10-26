@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Firefox Toolkit",
+  "version": "1.0.0",
+  "description": "Plugin modular: limpeza do feed do Reddit e sidebar com sites personalizados.",
+  "permissions": ["storage", "menus"],
+  "host_permissions": [
+    "*://*.reddit.com/*",
+    "*://reddit.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "core/registry.js",
+      "core/settings.js",
+      "modules/sidebar/sidebar-api.js",
+      "modules/sidebar/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.reddit.com/*",
+        "*://reddit.com/*"
+      ],
+      "js": [
+        "core/registry.js",
+        "core/settings.js",
+        "modules/reddit/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "sidebar_action": {
+    "default_panel": "modules/sidebar/sidebar.html",
+    "default_title": "Sidebar"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Firefox Toolkit"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "firefox-toolkit@example.com",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}

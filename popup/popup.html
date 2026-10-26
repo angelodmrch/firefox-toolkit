@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../core/theme.css">
+  <style>
+    body {
+      width: 260px;
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .header {
+      background: var(--bg-secondary);
+      padding: 10px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .module {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .module-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      font-weight: 600;
+      background: var(--bg-secondary);
+    }
+
+    .module-body {
+      max-height: 260px;
+      overflow-y: auto;
+    }
+
+    .list-item {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border-light);
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .list-item:hover {
+      background: var(--hover-bg);
+    }
+
+    .footer-item {
+      padding: 8px 12px;
+      cursor: pointer;
+      color: var(--text-secondary);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .footer-item:hover {
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Firefox Toolkit</div>
+
+  <div id="modules"></div>
+
+  <div class="footer-item" id="openOptions">⚙️ Opções</div>
+
+  <script src="../core/registry.js"></script>
+  <script src="../core/settings.js"></script>
+  <script src="../core/ui.js"></script>
+  <!-- Module popup sections -->
+  <script src="../modules/sidebar/sidebar-api.js"></script>
+  <script src="../modules/sidebar/popup.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

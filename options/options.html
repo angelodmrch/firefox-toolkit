@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Firefox Toolkit - Opções</title>
+  <link rel="stylesheet" href="../core/theme.css">
+  <style>
+    body {
+      padding: 20px;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .module-card {
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background-color: var(--bg-secondary);
+    }
+
+    .module-card h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .module-card .description {
+      margin: 4px 0 12px;
+      color: var(--text-secondary);
+    }
+
+    .module-card.disabled .module-content {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .module-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .setting {
+      margin: 6px 0;
+    }
+
+    .item-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--bg-primary);
+    }
+
+    .item-inputs {
+      flex: 1;
+      display: flex;
+      gap: 12px;
+    }
+
+    input[type="text"], select {
+      padding: 8px 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      flex: 1;
+      font-size: 14px;
+      background-color: var(--input-bg);
+      color: var(--text-primary);
+    }
+
+    input[type="text"]:focus, select:focus {
+      outline: none;
+      border-color: var(--text-accent);
+    }
+
+    button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: white;
+    }
+
+    .btn-success { background-color: var(--button-success); }
+    .btn-primary { background-color: var(--button-primary); }
+    .btn-danger { background-color: var(--button-danger); }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .status {
+      color: var(--button-success);
+    }
+
+    .default-option {
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      border: 2px solid var(--text-accent);
+      border-radius: 10px;
+      background-color: var(--bg-accent);
+    }
+
+    .default-option label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-accent);
+    }
+
+    .default-option select {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Firefox Toolkit</h1>
+
+  <div id="modules"></div>
+
+  <script src="../core/registry.js"></script>
+  <script src="../core/settings.js"></script>
+  <script src="../core/ui.js"></script>
+  <!-- Module options sections -->
+  <script src="../modules/sidebar/sidebar-api.js"></script>
+  <script src="../modules/sidebar/options.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
