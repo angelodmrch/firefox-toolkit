@@ -4,14 +4,12 @@ Plugin modular para Firefox que junta o antigo **reddit-plugin** e o **custom-fi
 
 ## Versão e publicação
 
-Este plugin é a continuação do **Reddit Plugin** publicado no addons.mozilla.org (versão 1.1). Ele usa o mesmo ID (`reddit-plugin@example.com`) e começa na versão **1.2**, então deve ser enviado como nova versão daquele mesmo listing, e quem já tem o Reddit Plugin instalado recebe a atualização automaticamente.
+Este plugin é a continuação do **Reddit Plugin** publicado no addons.mozilla.org (versão 1.1). Ele usa o mesmo ID (`reddit-plugin@example.com`) e está na versão **1.3**, então deve ser enviado como nova versão daquele mesmo listing, e quem já tem o Reddit Plugin instalado recebe a atualização automaticamente.
 
 ## Módulos
 
 ### Reddit (`modules/reddit/`)
-- Revela posts NSFW automaticamente (clica no overlay "show 18+ content")
 - Remove posts de jogos (`shreddit-post[game]`) do feed
-- Cada uma das duas funções pode ser desligada separadamente nas opções
 - Funciona em feeds dinâmicos (MutationObserver + checagem a cada 2s)
 
 ### Sidebar personalizada (`modules/sidebar/`)

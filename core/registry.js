@@ -12,7 +12,6 @@ Toolkit.modules = [
     defaultEnabled: true,
     // Simple on/off settings, rendered automatically on the options page
     settings: [
-      { key: "unblurNsfw", label: "Revelar posts NSFW automaticamente", default: true },
       { key: "removeGamePosts", label: "Remover posts de jogos do feed", default: true }
     ]
   },
